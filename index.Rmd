@@ -1,0 +1,100 @@
+---
+title: "Outside in: The circular dynamics of minds, brains, & behavior"
+output: revealjs::revealjs_presentation
+---
+
+# Preliminaries
+
+## Support
+
+## Agenda
+
+- $\Psi >> \Phi$
+- 4 stances
+- 1 stance, 4 realms
+- Outside in
+- Duality in description
+- The road ahead
+
+# $\Psi >> \Phi$
+
+## But why?
+
+## What to do about it?
+
+# 4 stances
+
+## Skinner
+
+## Gibson
+
+## Chomsky
+
+## Bernstein (Lorenz?)
+
+# 1 stance, 4 realms
+
+## $A$
+
+## $W$
+
+## $P$
+
+## $C$
+
+# Outside in
+
+## S-R
+
+## S-O/C-R
+
+- But can't account for *variability* in behavior, except as noise  
+
+## Neuroscience needs behavior...
+
+Krakauer
+
+## Perceptual Control Theory (PCT)
+
+<img src="https://thepsychologist.bps.org.uk/sites/thepsychologist.bps.org.uk/files/mansell.jpg" height=500px/>
+
+## Circular causality & hierarchical control
+
+# Duality in description
+
+## Algorithms vs. dynamics
+
+## Maps
+
+# A cumulative science of minds, brains, bodies, & behavior
+
+## PLAY
+
+## Databrary
+
+## Our open science future
+
+# Outside in
+
+
+
+---
+
+<img src="https://julieamarxhausen.files.wordpress.com/2011/08/gaia-pc-jigsaw-puzzle.jpg" height=500px/>
+
+## Cataloging hierarchical control
+
+## Image stabilization
+
+- VOR
+- OKN
+- Pursuit
+
+## Postural control
+
+- Righting reflex
+- Myotactic reflex
+
+## Visual proprioception
+
+- $A$ -> $W$ -> $P$
