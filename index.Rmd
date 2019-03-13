@@ -1,88 +1,285 @@
 ---
-title: "Outside in: The circular dynamics of minds, brains, & behavior"
-output: revealjs::revealjs_presentation
+title: "The whole elephant"
+output: 
+  revealjs::revealjs_presentation:
+    css: styles.css
+    self_contained: false
+    lib_dir: libs
+    incremental: false
+    theme: simple
+    transition: none
+    reveal_plugins: ["notes", "zoom"]
+    reveal_options:
+      slideNumber: true
+      previewLinks: false
+      center: true
+      touch: true
 ---
 
 # Preliminaries
 
 ## Support
 
+<div class="centered">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/87/NSF_Logo.PNG" height=250px>
+<img src="https://science.nichd.nih.gov/confluence/download/attachments/34472103/NICHD-vertical-2-color.png?version=1&modificationDate=1477410070000&api=v2" height=250px>
+</br>
+<img src="https://sloan.org/storage/app/media/Logos/Sloan-Logo-stacked-black-web.png" height-250px>
+<img src="http://sagebase.org/wp-content/uploads/2016/03/sponsor_NIHmentalhealth.jpg" height=250px>
+</div>
+
 ## Agenda
 
 - $\Psi >> \Phi$
-- 4 stances
-- 1 stance, 4 realms
-- Outside in
+- 4 realms
 - Duality in description
 - The road ahead
 
 # $\Psi >> \Phi$
 
+---
+
+<img src="img/psych-harder-1.jpg" height=500px/>
+
+---
+
+<img src="img/psych-harder-2.jpg" height=500px/>
+
 ## But why?
+
+---
+
+<img src="http://cdn2.hubspot.net/hub/134568/file-1208368053-jpg/6-blind-men-hans.jpg" height=550px>
+
+<!-- The whole elephant -->
 
 ## What to do about it?
 
-# 4 stances
+# 4 realms and their interactions
 
-## Skinner
+--
 
-## Gibson
+<img src="img/nested-causality.jpeg" height=500px/>
 
-## Chomsky
+---
 
-## Bernstein (Lorenz?)
+| Realm | Domain |
+|-------|---------|
+| $W$   | The world |
+| $B$   | The body |
+| $N$   | The nervous system |
+| $M$   | The mind |
 
-# 1 stance, 4 realms
+---
 
-## $A$
+$M = f(N)$<\br>
+$N = f(N,B)$<\br>
+$B = f(B,N,W)$<\br>
+$W = f(W_{B},W_{\bar{B}},B)$<\br>
 
-## $W$
+<!-- ## Skinner -->
 
-## $P$
+<!-- ## Gibson -->
 
-## $C$
+<!-- ## Chomsky -->
 
-# Outside in
+<!-- ## Bernstein (Lorenz?) -->
 
-## S-R
+## Nested causality
 
-## S-O/C-R
+- Mind within nervous system
+- Nervous system within body
+- Body within world
 
-- But can't account for *variability* in behavior, except as noise  
+## Nested causality
 
-## Neuroscience needs behavior...
+- Measure $W$, $B$, $N$
+- $M$ only via $N$, $B$
 
-Krakauer
+## $S$->$R$ psychology
+
+- $S$ (stimulus) -> $R$ (response)
+    - $S$ and $R$ observable
+    - $S$ is the effect of some $W_i$ on $B$
+    - $R$ is some change in $B$
+    
+---
+
+<img src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTE5NTU2MzE2MzcxNTg0NTIz/bf-skinner-9485671-1-402.jpg" height=500px/>
+
+B.F. Skinner
+    
+## From $S$->$R$ to $S$->$C$->$R$
+
+- $S$ (stimulus) -> $C$ (cognition/computation) -> $R$ (response)
+    - $C$ inferred from structure in $S$->$R$
+    - $C$ elaborate, probably innate, e.g., universal grammar
+- Cognitive 'revolution'
+- Cognitive neuroscience ($C=f(N,M)$)
+
+---
+
+<img src="https://theintercept.imgix.net/wp-uploads/sites/1/2018/09/American-Dissident-Noam-Chomsky-on-the-State-of-the-Empire-1537928785.jpg?auto=compress%2Cformat&q=90&fit=crop&w=1440&h=720"/>
+
+Noam Chomsky
+
+## *Circular* causality
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(igraph)
+el <- rbind(c("C","A"), c("A","E"), c("E","P"), c("P","C"))
+g <- graph_from_edgelist(el)
+g$layout <- layout_in_circle
+plot(g, vertex.size=50, vertex.color="gray")
+```
+
+---
+
+$A$ (actions) create $E$ (effects)
+
+$E$ (effects) induce $P$ (perceptions)
+
+$P$ (perceptions) affect $C$ (computations/cognitions)
+
+$C$ (computations/cognitions) affect $A$ (actions)
+
+## Consequences
+
+- $S$->$R$ and $S$->$C$->$R$ => linear causality
+- Properties of $W$ downplayed
+- Origins of $C$ attributed to...?
+- Why are $S$ causal and not $A$?
+- *Variability* in behavior ($A$) only noise
+
+---
+
+<!-- <img src="https://jlwatsonconsulting.typepad.com/.a/6a0133f49a611c970b01b7c7870903970b-popup"/> -->
+<img src="http://1.bp.blogspot.com/_-62BDqBrXps/TJcN0wxoTgI/AAAAAAAACPw/sWoDAyGhJM4/s320/baby_out_with_bathwater_3%5B1%5D.gif"/>
+
+<!-- Throwing out the baby with the bathwater -->
+
+---
+
+<img src="https://cdn.vox-cdn.com/thumbor/38cL6UkWMphRIxPGCjYjjf4swcU=/23x0:1864x1381/920x613/filters:focal(23x0:1864x1381):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/46249310/541530203.0.0.jpg" height=500px/>
+
+---
+
+| | |
+|------------------|------------------|
+| known-knowns | **known-unknowns** |
+| unknown-knowns | unknown-unknowns |
+
+---
+
+| | |
+|------------------|------------------|
+| known-knowns | known-unknowns |
+| **unknown-knowns** | unknown-unknowns |
+
+# Other symptoms...
+
+## In neuroscience
+
+<a href="https://doi.org/10.1016/j.neuron.2016.12.041">
+<img src="img/krakauer.jpg" height=500px/>
+</a>
+
+<!-- Krakauer paper title -->
+
+---
+
+<div class="centered">
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0896627316310406-gr1.jpg" height=450px/>
+</div>
+
+---
+
+<div class="centered">
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0896627316310406-gr2.jpg" height=450px/>
+</div>
+
+---
+
+<div class="centered">
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0896627316310406-gr3.jpg" height=450px/>
+</div>
+
+## Algorithms vs. Dynamics ([Van Gelder, 1995](http://dx.doi.org/10.2307/2941061))
+
+<p><a href="https://commons.wikimedia.org/wiki/File:Maquina_vapor_Watt_ETSIIM.jpg#/media/File:Maquina_vapor_Watt_ETSIIM.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Maquina_vapor_Watt_ETSIIM.jpg" alt="Maquina vapor Watt ETSIIM.jpg"></a><br>By Nicolás Pérez, <a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=195711">Link</a></p>
+
+---
+
+1. Measure the speed of the flywheel.
+2. Compare the actual speed against the desired speed.
+3. If there is no discrepancy, return to step 1. Otherwise,
+    a. measure the current steam pressure;
+    b. calculate the desired alteration in steam pressure;
+    c. calculate the necessary throttle valve adjustment.
+4. Make the throttle valve adjustment.
+5. Return to step 1. 
+
+---
+
+<p><a href="https://commons.wikimedia.org/wiki/File:Centrifugal_governor.png#/media/File:Centrifugal_governor.png"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Centrifugal_governor.png" alt="Centrifugal governor.png"></a><br>By R. Routledge - Image from "Discoveries &amp; Inventions of the Nineteenth Century" by R. Routledge, 13th edition, published 1900., Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=231047">Link</a></p>
+
+## What if Marr was wrong?
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Chessboard480.svg/312px-Chessboard480.svg.png"/>
+
+## *Biological* computing
+
+- Constrained by space, time, energy
+- Controls real-time behaviors (ingestion, defense, reproduction)
+- Interacts with dynamic environments
+
+## Circular causality in nervous system architecture
+
+<div class="centered">
+<img src="https://raw.githubusercontent.com/psu-psychology/psy-511-scan-fdns-2017/master/lectures/img/swanson-2005-fig-1.jpg" height=450px/>
+
+[Swanson, 2005](http://dx.doi.org/10.1002/cne.20733)
+</div>
+
+---
+
+<div class="centered">
+<img src="https://raw.githubusercontent.com/psu-psychology/psy-511-scan-fdns-2017/master/lectures/img/swanson-2005-fig-3.jpg" height=450px/>
+
+[Swanson, 2005](http://dx.doi.org/10.1002/cne.20733)
+</div>
+
+## Whither connectomics
+
+> "*What we know from C. elegans and the crustacean stomatogastric ganglion, with networks involving very few neurons, is that we haven't a clue how they work even with the essential addition of electrophysiology. In C. elegans a network of just two neurons can behave quite differently at different times, depending on what modulators are around. So, while SS's memorable (if pukeworthy) 'I am more than my genome, I am my connectome' may be true in a grossly superficial way, they are not going resolve connectional issues in any useful way using their current approaches.*"
+
+[Costandi, 2012](https://www.theguardian.com/science/neurophilosophy/2012/sep/21/connectome-review)
+
+# Looking ahead
 
 ## Perceptual Control Theory (PCT)
 
 <img src="https://thepsychologist.bps.org.uk/sites/thepsychologist.bps.org.uk/files/mansell.jpg" height=500px/>
 
-## Circular causality & hierarchical control
+## Hierarchies of control
 
-# Duality in description
+<!-- ## Dynamical Systems Theory (DCT) -->
 
-## Algorithms vs. dynamics
+<!-- # A cumulative science of minds, brains, bodies, & behavior -->
 
-## Maps
+<!-- ## PLAY -->
 
-# A cumulative science of minds, brains, bodies, & behavior
+<!-- ## Databrary -->
 
-## PLAY
+<!-- ## Our open science future -->
 
-## Databrary
+<!-- # Outside in -->
 
-## Our open science future
+<!-- --- -->
 
-# Outside in
+<!-- <img src="https://julieamarxhausen.files.wordpress.com/2011/08/gaia-pc-jigsaw-puzzle.jpg" height=500px/> -->
 
-
-
----
-
-<img src="https://julieamarxhausen.files.wordpress.com/2011/08/gaia-pc-jigsaw-puzzle.jpg" height=500px/>
-
-## Cataloging hierarchical control
+# Examples of circular control systems
 
 ## Image stabilization
 
@@ -95,6 +292,76 @@ Krakauer
 - Righting reflex
 - Myotactic reflex
 
-## Visual proprioception
+## Steering
 
 - $A$ -> $W$ -> $P$
+
+## Visual object tracking
+
+## Fruitful lines of inquiry
+
+- Properties of $W$ and of $A$->$W$->$P$
+    - Events in $W$ specified by multiple $P_i$
+    - Topographic maps
+    - 'Fourier'-like mappings common
+- Accumulating evidence for 'controlled' systems (and controlled variables)
+
+## Less fruitful lines...
+
+- Behavioral systems less clearly influenced by control
+
+# Relation to other ideas
+
+- Forward modeling, predictive control
+- Reafference
+
+# Wrapping up
+
+---
+
+<img src="img/nested-causality.jpeg" height=500px/>
+
+<!-- Nested causality -->
+
+---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+plot(g, vertex.size=50, vertex.color="gray")
+```
+
+---
+
+| Algorithms | Dynamics |
+|------------|----------|
+| for x in range(0, n): | $\dot{x}=f(x,a)$  |
+
+---
+
+<img src="https://thepsychologist.bps.org.uk/sites/thepsychologist.bps.org.uk/files/mansell.jpg" height=500px/>
+
+---
+
+<div class="centered">
+<img src="https://raw.githubusercontent.com/psu-psychology/psy-511-scan-fdns-2017/master/lectures/img/swanson-2005-fig-1.jpg" height=450px/>
+
+[Swanson, 2005](http://dx.doi.org/10.1002/cne.20733)
+</div>
+
+---
+
+<div class="centered">
+<img src="http://static.neatorama.com/images/2012-09/girl-hugging-elephant.jpg" height=500px>
+
+# Materials
+
+This talk was produced on `r Sys.Date()` in [RStudio](http://rstudio.com) version using R Markdown and the reveal.JS framework.
+The code and materials used to generate the slides may be found at <https://github.com/gilmore-lab/2019-03-28-cne/>.
+Information about the R Session that produced the code is as follows:
+
+---
+
+```{r session-info}
+sessionInfo()
+```
+
+
