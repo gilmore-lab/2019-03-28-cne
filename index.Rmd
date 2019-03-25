@@ -505,9 +505,9 @@ Powers, 1973
 
 ## What is being controlled?
 
-- Perceptual states (PCT) vs. Actions (Ecological Psychologists, forward modelers)
+- Perceptual states (PCT) vs. actions (Ecological psychologists, forward modelers)
 - Control illustrates the purposive dimension of behavior (Tolman)
-- Mappings from $S$ to $R$ and $C$ -> $C$ (cognitive control/executive functions)
+- Mappings from $S \rightarrow R$ and $C \rightarrow C$ (cognitive control/executive functions)
 
 ## What do animals control?
 
@@ -527,10 +527,10 @@ Powers, 1973
     
 ## Locomotion
 
-- Foundational example of "knowing" ($A$->$W$->$P$) (Turvey & Shaw)
-- Change body configuration
+- Foundational example of "knowing" ($R \rightarrow W \rightarrow S$)
+- Systematic, often rhythmic changes in body configuration
 - Produce forces that propel organism
-- Control variable(s) are speed, heading direction, posture
+- Control variables: speed, heading direction, posture
     
 ## Embedded within locomotion
 
@@ -551,81 +551,58 @@ Powers, 1973
 ## Constraints on 'locomotable' trajectory
 
 - With suitable supporting surface (friction, support rigidity, size)
-- With sufficient 'clearance' to avoid injury
+- With sufficient 'clearance' to avoid collision or injury
 
 ## Controlling speed
 
 - From proprioception -> energy expenditure, limb movement rate, respiration and heart rate
 - From vision -> optical flow (as a function of distance)
-- From audition -> 
-- From vestibular sense -> $\int{\dot{x}dx}$
+- From audition -> change in heard azimuth, elevation
+- From vestibular sense -> $\int{\ddot{x}dx}$
 
 ## Perceiving stable body posture
 
-- From vestibular sense -> linear and angular accelerations of the head (e.g., gravity)
+- From vestibular sense -> linear and angular head accelerations (gravity +)
 - From kinesthesia -> body configuration and Center of Mass (CoM)
 - From kinesthesia -> base of support
 
-## Visual perception of surface layout
+## Perceiving surface layout (visually)
 
 - Stabilize gaze direction (despite head/body movements)
 - Regulate binocular fixation
 - Sample visual field
 - Regulate optical focus
-- (Possibly) track moving target object
 
-## Postural control
-
-- Righting reflex
-- Myotatic (stretch) reflex
-
-## Visual object tracking
-
-<img src="powers-5.1.png" height=500px/>
-
-## Image stabilization
+## Stabilizing gaze direction
 
 - Vestibulo-ocular Response (VOR)
 - Optokinetic Nystagmus
 - Pursuit
 - Saccades & microsaccades
 
-## Fruitful lines
+## Controlling posture
 
-- Properties of $W$ and of $A$->$W$->$P$
-- Events in $W$ specified by multiple $P_i$
-- Topographic maps
-- 'Fourier'-like mappings common
+- Righting reflex (relative to gravity)
+- Myotatic reflexes (relative to target joint angle configuration)
 
-## Fruitful lines
+## A model task: Visuo-motor pursuit
 
-- Measuring 'controlled variables' in $N$ and $B$
-- Explains spontaneous (arising from $M$/$N$) behaviors
-- Effects of responses to stimuli $S$ (events in $W$ or $\dot{W}$) are perturbations to existing set of controlled variables
+<img src="img/powers-5.1.png" height=500px/>
 
-## Challenges
+Powers, 1973
 
-- Temporal delays
-- Simultaneous events have different propagation speeds
-- Vary over 2 orders of magnitude
+<!-- ## Fruitful lines -->
 
----
+<!-- - Properties of $W$ and of $A$->$W$->$P$ -->
+<!-- - Events in $W$ specified by multiple $P_i$ -->
+<!-- - Topographic maps -->
+<!-- - 'Fourier'-like mappings common -->
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-library(ggplot2)
-library(tidyverse)
-nerve <-read.csv('csv/nerve-conduction.csv')
-nerve <- nerve %>%
-  gather(key="diameter_stat", value="diameter", diameter_min, diameter_max) %>%
-  gather(key='speed_stat', value = 'speed', conduction_min, conduction_max)
-nerve %>% 
-  ggplot(.) +
-  aes(x = diameter, y = speed, color = myelin) +
-  geom_point() +
-  ylab('m/s') +
-  xlab(bquote("axon diameter" ~ mu*m)) +
-  ggtitle('Speed of neural conduction')
-```
+<!-- ## Fruitful lines -->
+
+<!-- - Measuring 'controlled variables' in $N$ and $B$ -->
+<!-- - Explains spontaneous (arising from $M$/$N$) behaviors -->
+<!-- - Effects of responses to stimuli $S$ (events in $W$ or $\dot{W}$) are perturbations to existing set of controlled variables -->
 
 ## Challenges
 
@@ -655,12 +632,24 @@ body posture from vision, vestibular proprioception, muscle/joint proprioception
 
 ## Challenges
 
-- What are the statistics of the perceptual environment...
+- Characterizing statistics of the perceptual environment...
 - Across ontogenetic development?
 
 ---
 
 <img src="img/raudies-gilmore-2014.jpg" height=500px/>
+
+## Visual motion statistics differ across age due to
+
+- Changes in body posture (crawling vs. walking)
+- Locomotor speed
+- Increasingly stable gaze
+
+---
+
+<https://nyu.databrary.org/volume/4#panel-data>
+
+Adolph, K. (2013). Crawling and walking infants see the world differently. Databrary. Retrieved March 25, 2019 from http://doi.org/10.17910/B7RP4H
 
 ## Challenges
 
@@ -672,11 +661,38 @@ $A(t)=\sum_{i=1}^n w_{i}(t)F_{i}$
 
 $\sum_{i=1}^n w_{i}(t) = 1$
 
+---
+
+Crawl/walk to mom + keep balance + stabilize gaze + look around + ...
+
 ## Challenges
 
 - Clear specification of controlled systems & control variables
 - Widespread open sharing
 - Imagine a 'meta-analysis' of control variables & dynamical relationships
+
+## Challenges
+
+- Temporal delays
+- Info from simultaneous events propagates at speeds differing by $10^2x$
+
+---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(ggplot2)
+library(tidyverse)
+nerve <-read.csv('csv/nerve-conduction.csv')
+nerve <- nerve %>%
+  gather(key="diameter_stat", value="diameter", diameter_min, diameter_max) %>%
+  gather(key='speed_stat', value = 'speed', conduction_min, conduction_max)
+nerve %>% 
+  ggplot(.) +
+  aes(x = diameter, y = speed, color = myelin) +
+  geom_point() +
+  ylab('m/s') +
+  xlab(bquote("axon diameter" ~ mu*m)) +
+  ggtitle('Speed of neural conduction')
+```
 
 # Take homes
 
@@ -698,7 +714,7 @@ plot(g, vertex.size=50, vertex.color="gray")
 |------------|----------|
 | for x in range(0, n): | $\dot{x}=f(x,a)$  |
 
-Different types of Black Boxes
+Different ways to characterize Black Boxes
 
 ---
 
