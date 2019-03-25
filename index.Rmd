@@ -31,9 +31,10 @@ output:
 ## Agenda
 
 - $\Psi >> \Phi$
-- 4 realms
-- Duality in description
-- The road ahead
+- 4 realms and their interactions
+- Closing the loop
+- In control
+- Take homes
 
 # $\Psi >> \Phi$
 
@@ -57,14 +58,14 @@ output:
 
 # 4 realms and their interactions
 
---
+---
 
 <img src="img/nested-causality.jpeg" height=500px/>
 
 ---
 
-| Realm | Domain |
-|-------|---------|
+| Realm               | Domain               |
+|---------------------|----------------------|
 | $W$   | The world |
 | $B$   | The body |
 | $N$   | The nervous system |
@@ -72,10 +73,13 @@ output:
 
 ---
 
-$M = f(N)$<\br>
-$N = f(N,B)$<\br>
-$B = f(B,N,W)$<\br>
-$W = f(W_{B},W_{\bar{B}},B)$<\br>
+$\dot{M} = f(M,N)$
+
+$\dot{N} = f(N,B)$
+
+$\dot{B} = f(B,N,W)$
+
+$\dot{W} = f(W,B)$
 
 <!-- ## Skinner -->
 
@@ -91,39 +95,109 @@ $W = f(W_{B},W_{\bar{B}},B)$<\br>
 - Nervous system within body
 - Body within world
 
-## Nested causality
+## Measure
 
-- Measure $W$, $B$, $N$
-- $M$ only via $N$, $B$
+- $W$, $B$, $N$ directly
+- At varied spatial & temporal scales
 
-## $S$->$R$ psychology
+---
 
-- $S$ (stimulus) -> $R$ (response)
-    - $S$ and $R$ observable
-    - $S$ is the effect of some $W_i$ on $B$
-    - $R$ is some change in $B$
-    
+<a href="">
+<img src="https://media.nature.com/lw926/nature-assets/neuro/journal/v17/n11/images/nn.3839-F1.jpg" height=500px/>
+</a>
+
+[Sejnowski, Churchland, & Movshon, 2014](http://doi.org/10.1038/nn.3839)
+
+## Measure
+
+- $M$ *indirectly*, only via $N$, $B$
+    - Overt behaviors
+    - Physiological/neural states
+- A 'black box'
+
+---
+
+<img src="https://images-na.ssl-images-amazon.com/images/I/41Pe93nMvcL._SX331_BO1,204,203,200_.jpg" height=500px/>
+
+---
+
+> "*How should an experimenter proceed when faced with a black box?*"
+
+> "*What properties of the Box's contents are discoverable and what are fundamentally not discoverable?*"
+
+> "*What methods should be used if the Box is to be investigated efficiently?*"
+
+[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/2
+
+---
+
+> "*The primary data of any investigation of a Black Box consists of a sequence of values of the vector with two components: (input state, output state).*"
+
+> "*From this there follows the fundamental deduction that all fundamental knolwedge obtainable from a Black Box (of given input and output) is such as can be obtained by re-coding the protocol [sequence of input/output measurements].*"
+
+[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/5
+
+---
+
+> "*What is being suggested now is not that Black Box behavior is somewhat like real objects, but that the real objects are in fact all Black Boxes, and that we have in fact been operating with Black Boxes all our lives.*"
+
+[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/18
+
+---
+
+> "*The theory of the Black Box is simply the study of the relations between the experimenter and his environment, when special attention is given to the flow of information. 'The study of the real world thus becomes a study of transducers.' (Goldman, Information Theory).*"
+
+[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/18
+
 ---
 
 <img src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTE5NTU2MzE2MzcxNTg0NTIz/bf-skinner-9485671-1-402.jpg" height=500px/>
 
 B.F. Skinner
+
+## $S$->$R$ (behaviorist) psychology
+
+- $S$ (stimulus) -> $R$ (response)
+    - $S$ and $R$ observable
+    - $S$ is the effect of some $W_i$ on $B$
+    - $R$ is some change in $B$ ($\dot(B_i)$)
     
-## From $S$->$R$ to $S$->$C$->$R$
-
-- $S$ (stimulus) -> $C$ (cognition/computation) -> $R$ (response)
-    - $C$ inferred from structure in $S$->$R$
-    - $C$ elaborate, probably innate, e.g., universal grammar
-- Cognitive 'revolution'
-- Cognitive neuroscience ($C=f(N,M)$)
-
 ---
 
 <img src="https://theintercept.imgix.net/wp-uploads/sites/1/2018/09/American-Dissident-Noam-Chomsky-on-the-State-of-the-Empire-1537928785.jpg?auto=compress%2Cformat&q=90&fit=crop&w=1440&h=720"/>
 
 Noam Chomsky
 
-## *Circular* causality
+## From $S$->$R$ to $S$->$C$->$R$
+
+- $S$ (stimulus) -> $C$ (cognition/computation) -> $R$ (response)
+    - $C$ inferred from structure in $S$->$R$
+    - $C$ elaborate, probably innate
+- $S$ (from $W$) not sufficient to explain cognition, especially language [(Chomsky, 1959)](http://cogprints.org/1148/1/chomsky.htm)
+
+## The cognitive 'revolution'
+
+- Developed in parallel with computer science, AI
+- $C$ ($M$) viewed in *algorithmic* terms
+
+## The cognitive (neuroscience) 'revolution'
+
+- Developed alongside cognitive science
+- $C$ ($M$) isomorphic with $N$
+- What $N_i$ compute functions of $C$ ($M$)?
+
+## The problem with revolutions...
+
+<img src="https://www.theparisreview.org/blog/wp-content/uploads/2018/04/576cb32f05aae_louisette.jpg" height=500px/>
+
+<!-- Is lots of people lose their heads. -->
+
+## Linear/open-loop causality
+
+- $S$->$R$ 
+- $S$->$C$->$R$
+
+## vs. *Closed-loop* causality
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(igraph)
@@ -145,11 +219,11 @@ $C$ (computations/cognitions) affect $A$ (actions)
 
 ## Consequences
 
-- $S$->$R$ and $S$->$C$->$R$ => linear causality
-- Properties of $W$ downplayed
-- Origins of $C$ attributed to...?
-- Why are $S$ causal and not $A$?
-- *Variability* in behavior ($A$) only noise
+- Properties of $W$ downplayed, ignored
+- Why are $S$ or $C$ ($M$) causal and not $R$ ($A$)?
+- *Variability* in behavior $R$ ($A$) only noise
+- *Origins* of $C$ attributed to...?
+- $W \leftrightarrow B \leftrightarrow N$ coupling reflects ontogenetic and phylogenetic history
 
 ---
 
@@ -176,7 +250,37 @@ $C$ (computations/cognitions) affect $A$ (actions)
 | known-knowns | known-unknowns |
 | **unknown-knowns** | unknown-unknowns |
 
-# Other symptoms...
+## [Alan Turing's letter to Ross Ashby (~1946)](https://www.bl.uk/collection-items/letter-from-alan-turing-to-w-ross-ashby)
+
+<img src="https://www.bl.uk/britishlibrary/~/media/bl/global/whats%20on/events/2017/july/24july_alanturing.jpg?crop=1&cropX=2&cropY=109&cropW=606&cropH=341&w=608&h=342&dispW=608&dispH=342" height=250px/>
+
+<img src="https://britishlibrary.typepad.co.uk/.a/6a00d8341c464853ef01b8d1c8bf06970c-500wi" height=250px/>
+
+---
+
+>"*In working on the ACE [Automatic Computing Engine] I am more interested in the possibility of producing models of the action of the brain than in the practical applications to computing.*"
+
+[Turing's letter to Ashby, 1946](https://www.bl.uk/collection-items/letter-from-alan-turing-to-w-ross-ashby)
+
+---
+
+>"*The ACE will be used, as you suggest,...in an entirely undisciplined manner, similar to the action of the lower centres, although the reflexes are extremely complicated. The disciplined action carries with it the disagreeable feature, which you mentioned, that it will be entirely uncritical when anything goes wrong. It will also be necessarily be devoid of anything that could be called originality.*"
+
+[Turing's letter to Ashby, 1946](https://www.bl.uk/collection-items/letter-from-alan-turing-to-w-ross-ashby)
+
+---
+
+>"*It would be quite possible for the machine to try out variations in behaviour and accept or reject them in the manner you describe, and I have been hoping to make the machine do this...*"
+
+[Turing's letter to Ashby, 1946](https://www.bl.uk/collection-items/letter-from-alan-turing-to-w-ross-ashby)
+
+## Ashby's homeostat
+
+<img src="https://a7.typepad.com/6a01901d7a04f8970b01bb08e27a57970d-300wi"/>
+
+<img src="https://a6.typepad.com/6a01901d7a04f8970b01bb08e27a7e970d-300wi"/>
+
+# Other signs and symptoms...
 
 ## In neuroscience
 
@@ -206,10 +310,13 @@ $C$ (computations/cognitions) affect $A$ (actions)
 
 ## Algorithms vs. Dynamics ([Van Gelder, 1995](http://dx.doi.org/10.2307/2941061))
 
-<p><a href="https://commons.wikimedia.org/wiki/File:Maquina_vapor_Watt_ETSIIM.jpg#/media/File:Maquina_vapor_Watt_ETSIIM.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Maquina_vapor_Watt_ETSIIM.jpg" alt="Maquina vapor Watt ETSIIM.jpg"></a><br>By Nicolás Pérez, <a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=195711">Link</a></p>
+## How to regulate the speed of a steam engine?
+
+<p><a href="https://commons.wikimedia.org/wiki/File:Maquina_vapor_Watt_ETSIIM.jpg#/media/File:Maquina_vapor_Watt_ETSIIM.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Maquina_vapor_Watt_ETSIIM.jpg" alt="Maquina vapor Watt ETSIIM.jpg" height=500px></a><br>By Nicolás Pérez, <a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=195711">Link</a></p>
 
 ---
 
+```
 1. Measure the speed of the flywheel.
 2. Compare the actual speed against the desired speed.
 3. If there is no discrepancy, return to step 1. Otherwise,
@@ -218,22 +325,55 @@ $C$ (computations/cognitions) affect $A$ (actions)
     c. calculate the necessary throttle valve adjustment.
 4. Make the throttle valve adjustment.
 5. Return to step 1. 
+```
 
 ---
 
-<p><a href="https://commons.wikimedia.org/wiki/File:Centrifugal_governor.png#/media/File:Centrifugal_governor.png"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Centrifugal_governor.png" alt="Centrifugal governor.png"></a><br>By R. Routledge - Image from "Discoveries &amp; Inventions of the Nineteenth Century" by R. Routledge, 13th edition, published 1900., Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=231047">Link</a></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Centrifugal_governor.png#/media/File:Centrifugal_governor.png"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Centrifugal_governor.png" alt="Centrifugal governor.png" height=500px></a><br>By R. Routledge - Image from "Discoveries &amp; Inventions of the Nineteenth Century" by R. Routledge, 13th edition, published 1900., Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=231047">Link</a></p>
 
-## What if Marr was wrong?
+## What if Marr was wrong (or we interpreted him wrongly)?
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Chessboard480.svg/312px-Chessboard480.svg.png"/>
 
 ## *Biological* computing
 
 - Constrained by space, time, energy
-- Controls real-time behaviors (ingestion, defense, reproduction)
+
+---
+
+<img src="https://images.newscientist.com/wp-content/uploads/2017/05/23120156/rexfeatures_8828108ac1-800x533.jpg" height=500px/>
+
+25 W vs. ?? MW
+
+<!-- Alpha Go vs. Ke Jie -->
+
+## *Biological* computing
+
+- Computes with chemistry (when possible), and 'wires' (when necessary)
+
+---
+
+<img src="https://images.gr-assets.com/books/1466902982l/23582015.jpg" height=500px/>
+
+<!-- Sterling and Laughlin -->
+
+## *Biological* computing
+
+- Engages in real-time behaviors with existential consequences
+    - ingestion, defense, reproduction
 - Interacts with dynamic environments
 
-## Circular causality in nervous system architecture
+---
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9nxoSRasq2Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!-- Video of Euglena in locomotion -->
+
+## *Biological* computing
+
+- Separate 'streams' for $S \leftrightarrow C \leftrightarrow A$
+
+---
 
 <div class="centered">
 <img src="https://raw.githubusercontent.com/psu-psychology/psy-511-scan-fdns-2017/master/lectures/img/swanson-2005-fig-1.jpg" height=450px/>
@@ -251,54 +391,119 @@ $C$ (computations/cognitions) affect $A$ (actions)
 
 ## Whither connectomics
 
+<div style="max-width:854px"><div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://embed.ted.com/talks/sebastian_seung" width="854" height="480" style="position:absolute;left:0;top:0;width:100%;height:100%" frameborder="0" scrolling="no" allowfullscreen></iframe></div></div>
+
+---
+
 > "*What we know from C. elegans and the crustacean stomatogastric ganglion, with networks involving very few neurons, is that we haven't a clue how they work even with the essential addition of electrophysiology. In C. elegans a network of just two neurons can behave quite differently at different times, depending on what modulators are around. So, while SS's memorable (if pukeworthy) 'I am more than my genome, I am my connectome' may be true in a grossly superficial way, they are not going resolve connectional issues in any useful way using their current approaches.*"
 
 [Costandi, 2012](https://www.theguardian.com/science/neurophilosophy/2012/sep/21/connectome-review)
 
-# Looking ahead
+# Closing the loop
 
 ## Perceptual Control Theory (PCT)
 
 <img src="https://thepsychologist.bps.org.uk/sites/thepsychologist.bps.org.uk/files/mansell.jpg" height=500px/>
 
-## Hierarchies of control
+## Tenets of PCT
 
-<!-- ## Dynamical Systems Theory (DCT) -->
+- Perception is the source of controlled variables
+- Actions serve to control perception with respect to some referent signal
+- Hierarchies of perceptual control systems exist
 
-<!-- # A cumulative science of minds, brains, bodies, & behavior -->
+## Related approaches
 
-<!-- ## PLAY -->
+- Dynamic Systems Theory (DST) (Van Gelder)
+- Ecological Psychology (e.g., Gibson, Turvey)
+- Forward models
+- Cognitive control/Executive functions
+- Reafference, Helmholtzian unconscious inference
 
-<!-- ## Databrary -->
+## What is being controlled?
 
-<!-- ## Our open science future -->
+- Perceptual states (PCT) vs. Actions (Ecological Psychologists, forward modelers)
+- Control illustrates the purposive dimension of behavior (Tolman)
+- Mappings from $S$ to $R$ and $C$ -> $C$ (cognitive control/executive functions)
 
-<!-- # Outside in -->
+# In control
 
-<!-- --- -->
+## What do animals control?
 
-<!-- <img src="https://julieamarxhausen.files.wordpress.com/2011/08/gaia-pc-jigsaw-puzzle.jpg" height=500px/> -->
+- Internal physiological states
+    - Hunger, thirst, activity/arousal level, temperature, ...
+    - Mood
+- External states
+    - Direction/position/motion of sensory organs
+    - Body postures, movements in space
+    - Emissions (e.g., sound)
+    - Secretions
+    
+## Locomotion
 
-# Examples of circular control systems
+- Foundational example of "knowing" ($A$->$W$->$P$) (Turvey & Shaw)
+- Change body configuration in ways to produce forces that propel organism in a particular direction and at a specific speed
+- Control variable(s)
+    - Speed, heading direction, posture
+    
+## Embedded within locomotion
 
-## Image stabilization
+- Perceiving a 'locomotable' trajectory
+- Perceiving stable body posture
 
-- VOR
-- OKN
-- Pursuit
+## Perceiving a 'locomotable' trajectory
+
+- From vision/audition -> surface layout
+- From kinesthesia -> body orientation relative to contact surface
+
+## Constraints on 'locomotable' trajectory
+
+- Wide enough to permit passage of body (geometric properties)
+- In general direction of desired heading (geometric properties)
+    - Direction is toward or away depending on valence of target(s)
+    - Warren & Fajen field theories
+- With suitable supporting surface (friction, support rigidity, size)
+
+## Controlling speed
+
+- From proprioception -> energy expenditure, limb movement rate, respiration and heart rate
+- From vision -> optical flow (as a function of distance)
+- From audition ->
+- From vestibular sense -> $\int{\dot{x}dx}$
+
+## Perceiving stable body posture
+
+- From vestibular sense -> linear and angular accelerations of the head (e.g., gravity)
+- From kinesthesia -> body configuration and Center of Mass (CoM)
+- From kinesthesia -> base of support
+
+## Visual perception of surface layout
+
+- Stabilize gaze direction (despite head/body movements)
+- Regulate binocular fixation
+- Sample visual field
+- Regulate optical focus
+- (Possibly) track moving target object
 
 ## Postural control
 
 - Righting reflex
-- Myotactic reflex
-
-## Steering
-
-- $A$ -> $W$ -> $P$
+- Myotatic reflex
 
 ## Visual object tracking
 
-## Fruitful lines of inquiry
+Image from Powers, 1973
+
+<!-- ## Image stabilization -->
+
+<!-- - VOR -->
+<!-- - OKN -->
+<!-- - Pursuit -->
+
+<!-- ## Steering -->
+
+<!-- - $A$ -> $W$ -> $P$ -->
+
+## Fruitful lines
 
 - Properties of $W$ and of $A$->$W$->$P$
     - Events in $W$ specified by multiple $P_i$
@@ -306,16 +511,52 @@ $C$ (computations/cognitions) affect $A$ (actions)
     - 'Fourier'-like mappings common
 - Accumulating evidence for 'controlled' systems (and controlled variables)
 
+## Fruitful lines
+
+- Can measure 'controlled variables' in $N$ and $B$
+- Explains spontaneous (arising from $M$/$N$) behaviors
+- Effects of responses to stimuli $S$ (events in $W$ or $\dot{W}$) are perturbations to existing set of controlled variables
+
 ## Less fruitful lines...
 
 - Behavioral systems less clearly influenced by control
 
-# Relation to other ideas
+## Challenges
 
-- Forward modeling, predictive control
-- Reafference
+- Temporal delays...what is the time basis?
+- Need deep 'theories of tasks' amenable to control variable analysis
+- How to handle mixtures of perceptual signals?
 
-# Wrapping up
+---
+
+$P(t)=\sum_{i=1}^n w_{i}(t)S_{i}(t)$
+
+$\sum_{i=1}^n w_{i}(t) = 1$
+
+e.g., object distance from vision, audition, olfaction, proprioception, or
+
+body posture from vision, vestibular proprioception, muscle/joint proprioception
+
+## Challenges
+
+- What are the statistics of the perceptual environment...
+- Across development?
+
+---
+
+
+
+## Challenges
+
+- Mixtures of control laws...
+
+---
+
+$A(t)=\sum_{i=1}^n w_{i}(t)F_{i}$
+
+$\sum_{i=1}^n w_{i}(t) = 1$
+
+# Take homes
 
 ---
 
@@ -341,16 +582,67 @@ plot(g, vertex.size=50, vertex.color="gray")
 
 ---
 
+<img src="img/maunsell-hist-of-control.jpg" height=500px/>
+
+[(Maunsell)](https://slideplayer.com/slide/4374326/)
+
+<!-- History of cybernetics, how lost to cognitive science -->
+
+---
+
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S1383762112000586-gr1.jpg"/>
+
+[(Wang et al. 2012)](https://doi.org/10.1016/j.sysarc.2012.06.004)
+
+<!-- Hierarchical control illustration -->
+
+<!-- --- -->
+
+<!-- Suggests an 'outside-in' approach to inquiry. Characterizing behaviors (or physiological states) where the perceptual control dynamics are well-enough known. -->
+<!-- Embrace multisensory flows. -->
+<!-- If we understand these dynamics sufficiently well, they will illuminate the $M$/$N$. Quote from Turvey & Shaw? -->
+
+---
+
 <div class="centered">
 <img src="https://raw.githubusercontent.com/psu-psychology/psy-511-scan-fdns-2017/master/lectures/img/swanson-2005-fig-1.jpg" height=450px/>
 
 [Swanson, 2005](http://dx.doi.org/10.1002/cne.20733)
 </div>
 
+## Complicate before simplifying?
+
+<img src="https://www.frontiersin.org/files/Articles/315952/fpls-08-02235-HTML/image_m/fpls-08-02235-g003.jpg" height=500px/>
+
+## Open science will accelerate discovery
+
+>"*The advancement of detailed and diverse knowledge about the development of the world’s children is essential for improving the health and well-being of humanity…*"
+
+---
+
+>"*We regard scientific integrity, transparency, and openness as essential for the conduct of research and its application to practice and policy…*"
+
+<https://www.srcd.org/about-us/policy-scientific-integrity-transparency-and-openness>
+
+## Open science will accelerate discovery
+
+- Open sharing of materials, analysis code, & data
+- Causal/dynamic models in discoverable formats
+- [Databrary.org](https://databrary.org)
+- Video + physio + other temporally dense time series?
+
+---
+
+<img src="http://cdn2.hubspot.net/hub/134568/file-1208368053-jpg/6-blind-men-hans.jpg" height=550px>
+
+<!-- The whole elephant -->
+
 ---
 
 <div class="centered">
 <img src="http://static.neatorama.com/images/2012-09/girl-hugging-elephant.jpg" height=500px>
+
+<!-- Girl hugging elephant -->
 
 # Materials
 
@@ -363,5 +655,3 @@ Information about the R Session that produced the code is as follows:
 ```{r session-info}
 sessionInfo()
 ```
-
-
