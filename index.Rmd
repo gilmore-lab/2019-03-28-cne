@@ -56,6 +56,23 @@ output:
 
 <!-- The whole elephant -->
 
+---
+
+<p><a href="https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Vienna)_-_Google_Art_Project.jpg#/media/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Vienna)_-_Google_Art_Project.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project.jpg/1200px-Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project.jpg" alt="Pieter Bruegel the Elder - The Tower of Babel (Vienna) - Google Art Project.jpg" height=500px></a><br>By <a href="https://en.wikipedia.org/wiki/en:Pieter_Bruegel_the_Elder" class="extiw" title="w:en:Pieter Bruegel the Elder">Pieter Brueghel the Elder</a> - <a rel="nofollow" class="external text" href="//www.google.com/culturalinstitute/asset-viewer/bAGKOdJfvfAhYQ">bAGKOdJfvfAhYQ at Google Cultural Institute</a> zoom level Scaled down from second-highest, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=22178101">Link</a></p>
+
+---
+
+The 'Rumsfeldian'
+
+| | |
+|------------------|------------------|
+| known-knowns | known-unknowns |
+| unknown-knowns | unknown-unknowns |
+
+---
+
+
+
 ## What to do about it?
 
 # 4 realms and their interactions
@@ -73,7 +90,13 @@ output:
 | $N$   | The nervous system |
 | $M$   | The mind |
 
----
+## Nested causality
+
+- Mind within nervous system
+- Nervous system within body
+- Body within world
+
+## Mutual coupling of dynamic states
 
 $\dot{M} = f(M,N)$
 
@@ -82,20 +105,6 @@ $\dot{N} = f(N,B)$
 $\dot{B} = f(B,N,W)$
 
 $\dot{W} = f(W,B)$
-
-<!-- ## Skinner -->
-
-<!-- ## Gibson -->
-
-<!-- ## Chomsky -->
-
-<!-- ## Bernstein (Lorenz?) -->
-
-## Nested causality
-
-- Mind within nervous system
-- Nervous system within body
-- Body within world
 
 ## Measure
 
@@ -112,7 +121,8 @@ $\dot{W} = f(W,B)$
 
 ## Measure
 
-- $M$ *indirectly*, only via $N$, $B$
+- $M$ *indirectly*
+- Only via $N$, $B$
 
 ---
 
@@ -148,7 +158,7 @@ $\dot{W} = f(W,B)$
 
 ---
 
-> "*From this there follows the fundamental deduction that all fundamental knolwedge obtainable from a Black Box (of given input and output) is such as can be obtained by re-coding the protocol [sequence of input/output measurements].*"
+> "*From this there follows the fundamental deduction that all fundamental knowledge obtainable from a Black Box (of given input and output) is such as can be obtained by re-coding the protocol [sequence of input/output measurements].*"
 
 [Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/5
 
@@ -164,14 +174,6 @@ $\dot{W} = f(W,B)$
 
 [Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/18
 
----
-
-<!-- > "*'The study of the real world thus becomes <span id='redtext'/>a study of transducers</span>.' (Goldman, Information Theory).*" -->
-
-> "*'The study of the real world thus becomes a study of transducers.' (Goldman, Information Theory).*"
-
-[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/18
-
 # You say you want a revolution...
 
 ---
@@ -184,8 +186,21 @@ B.F. Skinner
 
 - $S$ (stimulus) -> $R$ (response)
 - $S$ and $R$ observable
+
+---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(igraph)
+el <- rbind(c("W","S"), c("S","B"), c("B","R"), c("R","W"))
+g0 <- graph_from_edgelist(el)
+g0$layout <- layout_in_circle
+plot(g0, vertex.size=50, vertex.color="gray")
+```
+
+---
+
 - $S$ is the effect of some $W_i$ on $B$
-- $R$ is some change in $B$ ($\dot{B_i}$)
+- $R$ is some change in $B$ ($\dot{B_i}$) that is observable in $W$
     
 ---
 
@@ -198,12 +213,17 @@ Noam Chomsky
 - $S$ (stimulus) -> $C$ (cognition/computation) -> $R$ (response)
 - $C$ inferred from structure in $S$->$R$
 - $C$ elaborate, probably innate
-- $S$ alone (from $W$) insufficient to explain $C$, especially language, [(Chomsky, 1959)](http://cogprints.org/1148/1/chomsky.htm)
+- $S$ alone insufficient to explain $C$, especially language, [(Chomsky, 1959)](http://cogprints.org/1148/1/chomsky.htm)
 
 ## The cognitive 'revolution'
 
 - $C$ ($M$) viewed in *algorithmic* terms
 - Developed in parallel with computer science, AI
+
+---
+
+<!-- Michael Gazzaniga -->
+<img src="https://www.psych.ucsb.edu/sites/www.psych.ucsb.edu/files/styles/portrait-full/public/images/faculty/gazzaniga_02.jpg?itok=hkXryDw_" height=500px/>
 
 ## The cognitive (neuroscience) 'revolution'
 
@@ -212,11 +232,15 @@ Noam Chomsky
 - What $N_i$ compute functions of $C (M)$?
 - Assume 1:1 relationship between $N$ and $C (M)$
 
+---
+
+<img src="https://images-na.ssl-images-amazon.com/images/I/51I9BK4XmzL._SX326_BO1,204,203,200_.jpg" height=500px/>
+
 ## The problem with revolutions...
 
 <img src="https://www.theparisreview.org/blog/wp-content/uploads/2018/04/576cb32f05aae_louisette.jpg" height=500px/>
 
-<!-- Is lots of people lose their heads. -->
+<!-- "Is lots of people lose their heads." -->
 
 ## Linear/open-loop causality
 
@@ -226,7 +250,7 @@ Noam Chomsky
 ## vs. *Closed-loop* causality
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-library(igraph)
+#library(igraph)
 el <- rbind(c("C","R"), c("R","W"), c("W","S"), c("S","C"))
 g <- graph_from_edgelist(el)
 g$layout <- layout_in_circle
@@ -245,11 +269,11 @@ $C$ affect $A$
 
 ...
 
-## Consequences of a $S \rightarrow R$ and $S \rightarrow C \rightarrow R$ focus
+## Consequences...
 
 - Properties of $W$ downplayed, ignored
-- Why are $S_i$ or $C$ causal but not $R_i$?
-- *Variability* in behavior $R_i$ only noise
+- Why are $S$ or $C$ causal but not $R$?
+- *Variability* in behavior $R$ only noise
 - *Origins* of $R$, $C$, $A$?
 - $W \leftrightarrow B \leftrightarrow N$ reflect ontogenetic and phylogenetic history
 
@@ -287,14 +311,16 @@ $C$ affect $A$
 
 <https://en.wikipedia.org/wiki/There_are_known_knowns>
 
-## The unknown-known of cybernetics
+## The 'unknown-known' of cybernetics
 
 ## [Alan Turing's letter to Ross Ashby (~1946)](https://www.bl.uk/collection-items/letter-from-alan-turing-to-w-ross-ashby)
 
 ---
 
+<!-- Turing -->
 <img src="https://www.bl.uk/britishlibrary/~/media/bl/global/whats%20on/events/2017/july/24july_alanturing.jpg?crop=1&cropX=2&cropY=109&cropW=606&cropH=341&w=608&h=342&dispW=608&dispH=342" height=250px/>
 
+<!-- Ashby -->
 <img src="https://britishlibrary.typepad.co.uk/.a/6a00d8341c464853ef01b8d1c8bf06970c-500wi" height=250px/>
 
 ---
@@ -311,7 +337,14 @@ $C$ affect $A$
 
 ---
 
->"*The disciplined action carries with it the disagreeable feature, which you mentioned, that it will be entirely uncritical when anything goes wrong. It will also be necessarily be devoid of anything that could be called originality.*"
+>"*The disciplined action carries with it the disagreeable feature, which you mentioned, that it will be entirely uncritical when anything goes wrong.*"
+
+[Turing's letter to Ashby, 1946](https://www.bl.uk/collection-items/letter-from-alan-turing-to-w-ross-ashby)
+
+
+---
+
+>"*It will also be necessarily be devoid of anything that could be called originality.*"
 
 [Turing's letter to Ashby, 1946](https://www.bl.uk/collection-items/letter-from-alan-turing-to-w-ross-ashby)
 
@@ -384,9 +417,25 @@ $C$ affect $A$
 
 <p><a href="https://commons.wikimedia.org/wiki/File:Centrifugal_governor.png#/media/File:Centrifugal_governor.png"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Centrifugal_governor.png" alt="Centrifugal governor.png" height=500px></a><br>By R. Routledge - Image from "Discoveries &amp; Inventions of the Nineteenth Century" by R. Routledge, 13th edition, published 1900., Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=231047">Link</a></p>
 
-## What if Marr was wrong (or we interpreted him wrongly)?
+---
+
+<!-- David Marr -->
+<img src="http://www.neuroscience.cam.ac.uk/events/ABC2019/assets/images/David_Marr.jpg" height=250px/>
+
+<!-- J.J. Gibson -->
+<img src="https://www.easternpsychological.org/images/James_20Jerome_20Gibson.gif" height=250px/>
+
+## What if Marr was wrong (or we took him too literally)?
+
+- Computational theories matter
+- Algorithms matter
+- Hardware matters
+
+---
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Chessboard480.svg/312px-Chessboard480.svg.png"/>
+
+<!-- Story of Rick and the 8-queens problem -->
 
 ## *Biological* computing
 
@@ -412,8 +461,8 @@ $C$ affect $A$
 
 ## *Biological* computing
 
-- Engages in real-time behaviors with existential consequences (ingestion, defense, reproduction)
-- Interacts with dynamic environments
+- Engages in real-time behaviors with existential consequences (e.g., ingestion, defense, reproduction, locomotion, pursuit)
+- Interacts with and in dynamic environments
 
 ---
 
@@ -423,7 +472,7 @@ $C$ affect $A$
 
 ## *Biological* computing
 
-- Separate 'streams' for $S \leftrightarrow C \leftrightarrow A$
+- Separate neural 'streams' for $S \leftrightarrow C \leftrightarrow A$
 
 ---
 
@@ -441,7 +490,7 @@ $C$ affect $A$
 [Swanson, 2005](http://dx.doi.org/10.1002/cne.20733)
 </div>
 
-## Wither connectomics
+## Am I my connectome?
 
 <div style="max-width:854px"><div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://embed.ted.com/talks/sebastian_seung" width="854" height="480" style="position:absolute;left:0;top:0;width:100%;height:100%" frameborder="0" scrolling="no" allowfullscreen></iframe></div></div>
 
@@ -462,6 +511,24 @@ $C$ affect $A$
 > "*So, while SS's memorable (if pukeworthy) 'I am more than my genome, I am my connectome' may be true in a grossly superficial way, they are not going resolve connectional issues in any useful way using their current approaches.*"
 
 [Costandi, 2012](https://www.theguardian.com/science/neurophilosophy/2012/sep/21/connectome-review)
+
+---
+
+<img src="img/jonas-kording-2017.jpg"/>
+
+[(Jonas & Kording, 2017)](https://doi.org/10.1371/journal.pcbi.1005268)
+
+---
+
+>"*We show that [classic analytic neuroscience] approaches reveal interesting structure in the data but do not meaningfully describe the hierarchy of information processing in the microprocessor.*" 
+
+[(Jonas & Kording, 2017)](https://doi.org/10.1371/journal.pcbi.1005268)
+
+---
+
+>"*This suggests current analytic approaches in neuroscience may fall short of producing meaningful understanding of neural systems, regardless of the amount of data.*"
+
+[(Jonas & Kording, 2017)](https://doi.org/10.1371/journal.pcbi.1005268)
 
 # Closing the loop
 
@@ -514,9 +581,22 @@ Powers, 1973
 ## Internal states
     
 - Hunger, thirst, activity/arousal level, temperature, ...
-- Mood
-- Thoughts
-- ...
+
+---
+
+<img src="https://i.ytimg.com/vi/kAy-03hIfck/maxresdefault.jpg" height=500px/>
+
+<!-- Bart Simpson homeostasis -->
+
+---
+
+<img src="https://www.teachengineering.org/content/nyu_/activities/nyu_homeostasis/nyu_homeostasis_activity1_image1.jpg" height=500px/>
+
+<!-- Multiple loops for thermoregulation -->
+
+---
+
+- Mental states (mood, thought processes)?
 
 ## External states
     
@@ -525,13 +605,62 @@ Powers, 1973
 - Emissions (e.g., sound)
 - Secretions
     
+## Visuo-motor pursuit
+
+<img src="img/powers-5.1.png" height=500px/>
+
+Powers, 1973
+
+<!-- ## Fruitful lines -->
+
+<!-- - Properties of $W$ and of $A$->$W$->$P$ -->
+<!-- - Events in $W$ specified by multiple $P_i$ -->
+<!-- - Topographic maps -->
+<!-- - 'Fourier'-like mappings common -->
+
+<!-- ## Fruitful lines -->
+
+<!-- - Measuring 'controlled variables' in $N$ and $B$ -->
+<!-- - Explains spontaneous (arising from $M$/$N$) behaviors -->
+<!-- - Effects of responses to stimuli $S$ (events in $W$ or $\dot{W}$) are perturbations to existing set of controlled variables -->
+
+## Challenges
+
+- Deep 'theories of tasks' 
+- Amenable to control variable analyses
+
+---
+
+<img src="img/powers-6.1.png" height=500px/>
+
+Powers, 1973
+
+## Challenges
+
+- But which tasks?
+
+---
+
+<div class="centered">
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0896627316310406-gr1.jpg" height=450px/>
+</div>
+
+Krakauer et al., 2017
+
+## Criteria for task selection
+
+- Ethological relevance
+- Transparent control variables
+- Measurable state spaces
+- Rich 'computational' theory of the task
+
 ## Locomotion
 
-- Foundational example of "knowing" ($R \rightarrow W \rightarrow S$)
+- Foundational example of "knowing" (Turvey)
 - Systematic, often rhythmic changes in body configuration
 - Produce forces that propel organism
 - Control variables: speed, heading direction, posture
-    
+
 ## Embedded within locomotion
 
 - Perceiving a 'locomotable' trajectory
@@ -585,38 +714,78 @@ Powers, 1973
 - Righting reflex (relative to gravity)
 - Myotatic reflexes (relative to target joint angle configuration)
 
-## A model task: Visuo-motor pursuit
-
-<img src="img/powers-5.1.png" height=500px/>
-
-Powers, 1973
-
-<!-- ## Fruitful lines -->
-
-<!-- - Properties of $W$ and of $A$->$W$->$P$ -->
-<!-- - Events in $W$ specified by multiple $P_i$ -->
-<!-- - Topographic maps -->
-<!-- - 'Fourier'-like mappings common -->
-
-<!-- ## Fruitful lines -->
-
-<!-- - Measuring 'controlled variables' in $N$ and $B$ -->
-<!-- - Explains spontaneous (arising from $M$/$N$) behaviors -->
-<!-- - Effects of responses to stimuli $S$ (events in $W$ or $\dot{W}$) are perturbations to existing set of controlled variables -->
-
 ## Challenges
 
-- Deep 'theories of tasks' amenable to control variable analyses
+- Characterizing states
+- Characterizing state transitions
+- Is bigger better?
 
 ---
 
-<img src="img/powers-6.1.png" height=500px/>
+| A | B | C | D | E | F | G |
+|---|---|---|---|---|---|---|
+| B | C | D | D | F | G | A |
 
-Powers, 1973
+---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(igraph)
+el <- rbind(c("A","B"), c("B","C"), c("C","D"), c("D","E"), c("E", "F"), c("F", "G"), c("G", "A"))
+g2 <- graph_from_edgelist(el)
+g2$layout <- layout_in_circle
+plot(g2, vertex.size=50, vertex.color="gray")
+```
+
+---
+
+| A | H | H | H | H | F | H |
+|---|---|---|---|---|---|---|
+| H | H | H | H | F | H | A |
+
+---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(igraph)
+el <- rbind(c("A","H"), c("H","H"), c("F", "H"), c("H", "A"))
+g3 <- graph_from_edgelist(el)
+g3$layout <- layout_in_circle
+plot(g3, vertex.size=50, vertex.color="gray")
+```
+
+---
+
+| A | B | C | D | E | F | G |
+|---|---|---|---|---|---|---|
+| B | C | D | D | F | G | A |
+
+"Rhymes with B" -> H
+
+| A | H | H | H | H | F | H |
+|---|---|---|---|---|---|---|
+| H | H | H | H | F | H | A |
+
+Inspired by [Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656)
 
 ## Challenges
 
-- Handling mixtures of perceptual signals?
+- Dimensionality of input stream ($S$) state space mappings
+- Energy (EM, mechanical, thermal) or material fields in $W$
+- Receptor (photoreceptors, cochlear hair cells,...)
+- Cranial nerve projections
+- Topographic mappings in thalamus, cortex...
+
+## Challenges
+
+- Most biologically meaningful events are multimodal
+- Handling mixtures of (within or between mode) perceptual signals?
+
+---
+
+e.g., object distance from vision (monocular, binocular, motion cues, ...)
+
+object distance from audition, olfaction, proprioception, or
+
+body posture from vision, vestibular proprioception, muscle/joint proprioception
 
 ---
 
@@ -624,16 +793,37 @@ $P(t)=\sum_{i=1}^n w_{i}(t)S_{i}(t)$
 
 $\sum_{i=1}^n w_{i}(t) = 1$
 
----
-
-e.g., object distance from vision (multiple cues), audition, olfaction, proprioception, or
-
-body posture from vision, vestibular proprioception, muscle/joint proprioception
-
 ## Challenges
 
 - Characterizing statistics of the perceptual environment...
-- Across ontogenetic development?
+- Natural scene statistics
+
+---
+
+<img src="https://www.annualreviews.org/na101/home/literatum/publisher/ar/journals/content/psych/2008/psych.2008.59.issue-1/annurev.psych.58.110405.085632/production/images/large/ps590167.f3.jpeg" height=500px/>
+
+[Geisler, 2008](https://doi.org/10.1146/annurev.psych.58.110405.085632)
+
+## Challenges
+
+- States of perceptual environment across ontogenetic development...
+
+---
+
+```{r, results='asis', echo=FALSE}
+source("R/write_video_clip_html.R")
+write_video_clip_html("https://nyu.databrary.org/slot/7739/0,26134/asset/16749/download?inline=true", vid_w_pix = 640, vid_h_pix = 480, show_link = FALSE)
+```
+
+<!-- Gilmore, R.O., Raudies, F., Franchak, J. & Adolph, K. (2015). Understanding the development of motion processing by characterizing optic flow experienced by infants and their mothers. Databrary. Retrieved March 26, 2019 from http://doi.org/10.17910/B7.116 -->
+
+---
+
+```{r, results='asis', echo=FALSE}
+write_video_clip_html("https://nyu.databrary.org/slot/7739/0,26634/asset/16747/download?inline=true", vid_w_pix = 640, vid_h_pix = 480, show_link = FALSE)
+```
+
+<!-- Gilmore, R.O., Raudies, F., Franchak, J. & Adolph, K. (2015). Understanding the development of motion processing by characterizing optic flow experienced by infants and their mothers. Databrary. Retrieved March 26, 2019 from http://doi.org/10.17910/B7.116 -->
 
 ---
 
@@ -647,13 +837,20 @@ body posture from vision, vestibular proprioception, muscle/joint proprioception
 
 ---
 
-<https://nyu.databrary.org/volume/4#panel-data>
+```{r, results='asis', echo=FALSE}
+write_video_clip_html("https://nyu.databrary.org/slot/34/0,392902/asset/9218/download?inline=true", vid_w_pix = 640, vid_h_pix = 480, show_link = FALSE)
+```
 
-Adolph, K. (2013). Crawling and walking infants see the world differently. Databrary. Retrieved March 25, 2019 from http://doi.org/10.17910/B7RP4H
+<!-- Adolph, K. (2013). Crawling and walking infants see the world differently. Databrary. Retrieved March 25, 2019 from http://doi.org/10.17910/B7RP4H -->
 
 ## Challenges
 
+- Behaviors sequential, multivariate
 - Mixtures of control laws...
+
+---
+
+Crawl/walk to mom + keep balance + stabilize gaze + look around + ...
 
 ---
 
@@ -661,38 +858,48 @@ $A(t)=\sum_{i=1}^n w_{i}(t)F_{i}$
 
 $\sum_{i=1}^n w_{i}(t) = 1$
 
----
-
-Crawl/walk to mom + keep balance + stabilize gaze + look around + ...
-
-## Challenges
-
-- Clear specification of controlled systems & control variables
-- Widespread open sharing
-- Imagine a 'meta-analysis' of control variables & dynamical relationships
-
 ## Challenges
 
 - Temporal delays
-- Info from simultaneous events propagates at speeds differing by $10^2x$
+- Info from simultaneous events propagates at speeds differing by 100x
+- Comparable challenges for output streams
+
+<!-- --- -->
+
+<!-- ```{r, echo=FALSE, message=FALSE, warning=FALSE} -->
+<!-- library(ggplot2) -->
+<!-- library(tidyverse) -->
+<!-- nerve <-read.csv('csv/nerve-conduction.csv') -->
+<!-- nerve <- nerve %>% -->
+<!--   gather(key="diameter_stat", value="diameter", diameter_min, diameter_max) %>% -->
+<!--   gather(key='speed_stat', value = 'speed', conduction_min, conduction_max) -->
+<!-- nerve %>%  -->
+<!--   ggplot(.) + -->
+<!--   aes(x = diameter, y = speed, color = myelin) + -->
+<!--   geom_point() + -->
+<!--   ylab('m/s') + -->
+<!--   xlab(bquote("axon diameter" ~ mu*m)) + -->
+<!--   ggtitle('Speed of neural conduction') -->
+<!-- ``` -->
+
+## Challenges
+
+- Access to sufficiently rich datasets
+- Clear specification of controlled systems & control variables
+- Widespread open sharing of systems & variables
+- Imagine a 'meta-analysis' of control variables & dynamical relationships
 
 ---
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-library(ggplot2)
-library(tidyverse)
-nerve <-read.csv('csv/nerve-conduction.csv')
-nerve <- nerve %>%
-  gather(key="diameter_stat", value="diameter", diameter_min, diameter_max) %>%
-  gather(key='speed_stat', value = 'speed', conduction_min, conduction_max)
-nerve %>% 
-  ggplot(.) +
-  aes(x = diameter, y = speed, color = myelin) +
-  geom_point() +
-  ylab('m/s') +
-  xlab(bquote("axon diameter" ~ mu*m)) +
-  ggtitle('Speed of neural conduction')
-```
+<div class="centered">
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0896627316310406-gr3.jpg" height=450px/>
+</div>
+
+Krakauer et al., 2017
+
+## Despite the challenges
+
+- Many (most?) are 'known-unknowns'
 
 # Take homes
 
@@ -718,15 +925,16 @@ Different ways to characterize Black Boxes
 
 ---
 
-<img src="https://thepsychologist.bps.org.uk/sites/thepsychologist.bps.org.uk/files/mansell.jpg" height=500px/>
-
----
-
 <img src="img/maunsell-hist-of-control.jpg" height=500px/>
 
 [(Maunsell)](https://slideplayer.com/slide/4374326/)
 
 <!-- History of cybernetics, how lost to cognitive science -->
+
+---
+
+<img src="https://thepsychologist.bps.org.uk/sites/thepsychologist.bps.org.uk/files/mansell.jpg" height=500px/>
+
 
 ---
 
@@ -751,6 +959,8 @@ Different ways to characterize Black Boxes
 </div>
 
 ## Complicate before simplifying?
+
+---
 
 <img src="https://www.frontiersin.org/files/Articles/315952/fpls-08-02235-HTML/image_m/fpls-08-02235-g003.jpg" height=500px/>
 
@@ -827,12 +1037,13 @@ Different ways to characterize Black Boxes
 
 ---
 
-<video width="800" loop data-autoplay>
+<video width="800" data-autoplay>
   <source src="https://github.com/gilmore-lab/DEVSEC-2018/blob/master/mov/databrary-splash.mp4?raw=true" type="video/mp4">
   </video>
-rogilmore@psu.edu
-<https://gilmore-lab.github.io>
-<https://gilmore-lab.github.io/2019-03-25-cne/>
+rogilmore@psu.edu</br>
+<https://gilmore-lab.github.io></br>
+<https://gilmore-lab.github.io/2019-03-25-cne/></br>
+[\@rogilmore](https://twitter.com/rogilmore)
 
 # Materials
 
