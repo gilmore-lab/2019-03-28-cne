@@ -18,6 +18,11 @@ output:
 
 # Preliminaries
 
+```{r set-up, echo=FALSE, warning=FALSE, message=FALSE}
+library(databraryapi)
+login_db("rogilmore@psu.edu")
+```
+
 ## Support
 
 <div class="centered">
@@ -30,15 +35,15 @@ output:
 
 ## Agenda
 
-- $\Psi >> \Phi$
+- $D(\Psi) >> D(\Phi)$
 - 4 realms and their interactions
 - You say you want a revolution...
 - Fellow travelers...
 - Closing the loop
 - Take homes
-- Our open science future
+- Our (essential) open science future
 
-# $\Psi >> \Phi$
+# $D(\Psi) >> D(\Phi)$
 
 ---
 
@@ -62,7 +67,7 @@ output:
 
 ---
 
-The 'Rumsfeldian'
+The 'Rumsfeldian' space of knowledge
 
 | | |
 |------------------|------------------|
@@ -71,7 +76,44 @@ The 'Rumsfeldian'
 
 ---
 
+The 'Rumsfeldian' space of knowledge
 
+| | |
+|------------------|------------------|
+| known-knowns | known-unknowns |
+| **unknown-knowns** | unknown-unknowns |
+
+---
+
+<img src="https://cdn-images-1.medium.com/max/800/1*Nv4oqbfv5IwRSMdLGtFZuA.gif"/>
+
+<!-- - What does psychology aim to understand? -->
+
+---
+
+<img src="img/psychology-definition.jpg">
+
+<!-- Definition of psychology -->
+
+## Oh give me a 'ome...
+
+- [Genome](https://www.genome.gov/12011238/an-overview-of-the-human-genome-project/)
+- [Proteome](https://hupo.org/human-proteome-project)
+- [Metabolome](http://www.hmdb.ca/)
+- [Connectome](http://www.humanconnectomeproject.org/)
+- Behaviorome?
+
+---
+
+>"*Behavior is the linchpin of the most vexing problems in public health, and a better understanding of behavior is fundamental to achieving positive health outcomes, from prenatal development throughout adulthood.*"
+
+[Gilmore, Adolph, & Tamis-LeMonda, 2019](https://www.rick-gilmore.com/post/behavior-is-the-linchpin/)
+
+---
+
+>"*Behavior contributes to the progression or prevention of disease, defines a disorder or marks recovery, and provides mechanisms for therapeutic intervention.*"
+
+[Gilmore, Adolph, & Tamis-LeMonda, 2019](https://www.rick-gilmore.com/post/behavior-is-the-linchpin/)
 
 ## What to do about it?
 
@@ -92,9 +134,9 @@ The 'Rumsfeldian'
 
 ## Nested causality
 
-- Mind within nervous system
-- Nervous system within body
-- Body within world
+- Mind ($M$) within nervous system ($N$)
+- Nervous system ($N$) within body ($N$)
+- Body ($B$) within world ($W$)
 
 ## Mutual coupling of dynamic states
 
@@ -108,7 +150,7 @@ $\dot{W} = f(W,B)$
 
 ## Measure
 
-- $W$, $B$, $N$ directly
+- $W$, $B$, $N$ **directly**
 - At varied spatial & temporal scales
 
 ---
@@ -119,10 +161,17 @@ $\dot{W} = f(W,B)$
 
 [Sejnowski, Churchland, & Movshon, 2014](http://doi.org/10.1038/nn.3839)
 
+
 ## Measure
 
-- $M$ *indirectly*
+- $M$ **indirectly**
 - Only via $N$, $B$
+
+## $M$ highly salient, but...
+
+<img src="https://static.boredpanda.com/blog/wp-content/uploads/2018/07/arctic-fox-rescued-iceberg-canada-harrigan-russell-1-5b39d097f2b83__700.jpg" height=500px/>
+
+<!-- Fox on an iceberg. Like iceberg, belies bulk below. -->
 
 ---
 
@@ -213,11 +262,12 @@ Noam Chomsky
 - $S$ (stimulus) -> $C$ (cognition/computation) -> $R$ (response)
 - $C$ inferred from structure in $S$->$R$
 - $C$ elaborate, probably innate
-- $S$ alone insufficient to explain $C$, especially language, [(Chomsky, 1959)](http://cogprints.org/1148/1/chomsky.htm)
+- $S$ alone insufficient to explain $C$, especially language [(Chomsky, 1959)](http://cogprints.org/1148/1/chomsky.htm)
 
 ## The cognitive 'revolution'
 
 - $C$ ($M$) viewed in *algorithmic* terms
+- Formal operations on information structures
 - Developed in parallel with computer science, AI
 
 ---
@@ -236,18 +286,26 @@ Noam Chomsky
 
 <img src="https://images-na.ssl-images-amazon.com/images/I/51I9BK4XmzL._SX326_BO1,204,203,200_.jpg" height=500px/>
 
+<!-- Fodor's Modularity of Mind -->
+
+---
+
+<img src="https://i.pinimg.com/474x/4c/4d/b9/4c4db91517dc41660d2b44aa3f10eab5--phrenology-drawings-of.jpg"/>
+
+<!-- Phrenology -->
+
 ## The problem with revolutions...
 
 <img src="https://www.theparisreview.org/blog/wp-content/uploads/2018/04/576cb32f05aae_louisette.jpg" height=500px/>
 
-<!-- "Is lots of people lose their heads." -->
+<!-- "Is that something is always lost..." -->
 
-## Linear/open-loop causality
+## Linear/open-loop causal chains
 
 - $S \rightarrow R$ 
 - $S \rightarrow C \rightarrow R$
 
-## vs. *Closed-loop* causality
+## vs. *closed-loop* causal chains
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 #library(igraph)
@@ -417,15 +475,14 @@ $C$ affect $A$
 
 <p><a href="https://commons.wikimedia.org/wiki/File:Centrifugal_governor.png#/media/File:Centrifugal_governor.png"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Centrifugal_governor.png" alt="Centrifugal governor.png" height=500px></a><br>By R. Routledge - Image from "Discoveries &amp; Inventions of the Nineteenth Century" by R. Routledge, 13th edition, published 1900., Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=231047">Link</a></p>
 
----
-
+## David Marr & J.J. Gibson
 <!-- David Marr -->
 <img src="http://www.neuroscience.cam.ac.uk/events/ABC2019/assets/images/David_Marr.jpg" height=250px/>
 
 <!-- J.J. Gibson -->
 <img src="https://www.easternpsychological.org/images/James_20Jerome_20Gibson.gif" height=250px/>
 
-## What if Marr was wrong (or we took him too literally)?
+## What if we took Marr too literally?
 
 - Computational theories matter
 - Algorithms matter
@@ -477,7 +534,7 @@ $C$ affect $A$
 ---
 
 <div class="centered">
-<img src="https://raw.githubusercontent.com/psu-psychology/psy-511-scan-fdns-2017/master/lectures/img/swanson-2005-fig-1.jpg" height=450px/>
+<img src="https://raw.githubusercontent.com/psu-psychology/psy-511-scan-fdns-2017/master/lectures/img/swanson-2005-fig-1.jpg" height=500px/>
 
 [Swanson, 2005](http://dx.doi.org/10.1002/cne.20733)
 </div>
@@ -485,7 +542,7 @@ $C$ affect $A$
 ---
 
 <div class="centered">
-<img src="https://raw.githubusercontent.com/psu-psychology/psy-511-scan-fdns-2017/master/lectures/img/swanson-2005-fig-3.jpg" height=450px/>
+<img src="https://raw.githubusercontent.com/psu-psychology/psy-511-scan-fdns-2017/master/lectures/img/swanson-2005-fig-3.jpg" height=500px/>
 
 [Swanson, 2005](http://dx.doi.org/10.1002/cne.20733)
 </div>
@@ -516,19 +573,19 @@ $C$ affect $A$
 
 <img src="img/jonas-kording-2017.jpg"/>
 
-[(Jonas & Kording, 2017)](https://doi.org/10.1371/journal.pcbi.1005268)
+[Jonas & Kording, 2017](https://doi.org/10.1371/journal.pcbi.1005268)
 
 ---
 
 >"*We show that [classic analytic neuroscience] approaches reveal interesting structure in the data but do not meaningfully describe the hierarchy of information processing in the microprocessor.*" 
 
-[(Jonas & Kording, 2017)](https://doi.org/10.1371/journal.pcbi.1005268)
+[Jonas & Kording, 2017](https://doi.org/10.1371/journal.pcbi.1005268)
 
 ---
 
 >"*This suggests current analytic approaches in neuroscience may fall short of producing meaningful understanding of neural systems, regardless of the amount of data.*"
 
-[(Jonas & Kording, 2017)](https://doi.org/10.1371/journal.pcbi.1005268)
+[Jonas & Kording, 2017](https://doi.org/10.1371/journal.pcbi.1005268)
 
 # Closing the loop
 
@@ -536,15 +593,21 @@ $C$ affect $A$
 
 ---
 
+<img src="https://images-na.ssl-images-amazon.com/images/I/41D4paZ+vbL._US230_.jpg"/>
+
+William T. Powers
+
+---
+
 <img src="img/powers-5.2.png" height=500px/>
 
-Powers, 1973
+[Powers, 1973](https://www.amazon.com/Behavior-Perception-William-T-Powers/dp/0964712172)
 
 ---
 
 <img src="https://thepsychologist.bps.org.uk/sites/thepsychologist.bps.org.uk/files/mansell.jpg" height=500px/>
 
-Powers, 1973
+[Powers, 1973](https://www.amazon.com/Behavior-Perception-William-T-Powers/dp/0964712172)
 
 ## Tenets of PCT
 
@@ -556,7 +619,7 @@ Powers, 1973
 
 <img src="https://ars.els-cdn.com/content/image/1-s2.0-S1383762112000586-gr1.jpg" height=500px/>
 
-[(Wang et al. 2012)](https://doi.org/10.1016/j.sysarc.2012.06.004)
+[Wang et al. 2012](https://doi.org/10.1016/j.sysarc.2012.06.004)
 
 <!-- Hierarchical control illustration -->
 
@@ -566,14 +629,14 @@ Powers, 1973
 
 - Dynamic Systems Theory (DST) (Van Gelder)
 - Ecological Psychology (e.g., Gibson, Turvey)
-- Forward models
+- Forward models (e.g., Shadmehr & Mussa-Ivaldi; Wolpert)
 - Cognitive control/Executive functions
 - Reafference, Helmholtzian 'unconscious inference'
 
 ## What is being controlled?
 
-- Perceptual states (PCT) vs. actions (Ecological psychologists, forward modelers)
 - Control illustrates the purposive dimension of behavior (Tolman)
+- Perceptual states (PCT) vs. actions (Ecological psychologists, forward modelers)
 - Mappings from $S \rightarrow R$ and $C \rightarrow C$ (cognitive control/executive functions)
 
 ## What do animals control?
@@ -609,7 +672,7 @@ Powers, 1973
 
 <img src="img/powers-5.1.png" height=500px/>
 
-Powers, 1973
+[Powers, 1973](https://www.amazon.com/Behavior-Perception-William-T-Powers/dp/0964712172)
 
 <!-- ## Fruitful lines -->
 
@@ -633,7 +696,7 @@ Powers, 1973
 
 <img src="img/powers-6.1.png" height=500px/>
 
-Powers, 1973
+[Powers, 1973](https://www.amazon.com/Behavior-Perception-William-T-Powers/dp/0964712172)
 
 ## Challenges
 
@@ -653,6 +716,11 @@ Krakauer et al., 2017
 - Transparent control variables
 - Measurable state spaces
 - Rich 'computational' theory of the task
+
+## Peripheral control points
+
+- Vision: direction of gaze, eyes open/closed, pupil diameter, lens thickness
+- Audition: head position, ears covered/un-, acoustic/stapedius reflex, outer hair cells in cochlea 
 
 ## Locomotion
 
@@ -676,6 +744,12 @@ Krakauer et al., 2017
 - Wide enough to permit passage of body (geometric properties)
 - In general direction of desired heading (geometric properties)
 - Direction toward or away depending on valence of target(s)
+
+---
+
+<img src="https://www.researchgate.net/publication/26869872/figure/fig1/AS:340736089313283@1458249222186/Scene-geometry-used-to-control-steering-in-the-FW-model-Fajen-Warren-2003-Distances.png"/>
+
+[Fajen & Warren 2003](https://psycnet.apa.org/doi/10.1037/0096-1523.29.2.343)
 
 ## Constraints on 'locomotable' trajectory
 
@@ -768,11 +842,27 @@ Inspired by [Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W
 
 ## Challenges
 
-- Dimensionality of input stream ($S$) state space mappings
+- Dimensionality of input stream ($S$) state spaces
 - Energy (EM, mechanical, thermal) or material fields in $W$
-- Receptor (photoreceptors, cochlear hair cells,...)
-- Cranial nerve projections
-- Topographic mappings in thalamus, cortex...
+<!-- - Receptor (photoreceptors, cochlear hair cells,...) -->
+<!-- - Cranial nerve projections -->
+<!-- - Topographic mappings in thalamus, cortex... -->
+
+---
+
+Plenoptic function (Adelson & Bergen, 1991)
+
+<img src="http://web.cs.wpi.edu/~emmanuel/courses/cs563/write_ups/bradg/interpolation/interpolation_files/image012.jpg"/>
+
+$P(\theta,\phi,\bar{\lambda},t,V_{x},V_{y},V_{z})$. 
+
+---
+
+$(V_{x},V_{y},V_{z})$: locations in $W$
+
+$(\theta,\phi)$: optic axis, usually aligned with $V_{z}$
+
+$\bar{\lambda}$: wavelength distribution
 
 ## Challenges
 
@@ -815,7 +905,7 @@ source("R/write_video_clip_html.R")
 write_video_clip_html("https://nyu.databrary.org/slot/7739/0,26134/asset/16749/download?inline=true", vid_w_pix = 640, vid_h_pix = 480, show_link = FALSE)
 ```
 
-<!-- Gilmore, R.O., Raudies, F., Franchak, J. & Adolph, K. (2015). Understanding the development of motion processing by characterizing optic flow experienced by infants and their mothers. Databrary. Retrieved March 26, 2019 from http://doi.org/10.17910/B7.116 -->
+[Gilmore et al., 2015](http://doi.org/10.17910/B7.116)
 
 ---
 
@@ -824,6 +914,8 @@ write_video_clip_html("https://nyu.databrary.org/slot/7739/0,26634/asset/16747/d
 ```
 
 <!-- Gilmore, R.O., Raudies, F., Franchak, J. & Adolph, K. (2015). Understanding the development of motion processing by characterizing optic flow experienced by infants and their mothers. Databrary. Retrieved March 26, 2019 from http://doi.org/10.17910/B7.116 -->
+
+[Gilmore et al., 2015](http://doi.org/10.17910/B7.116)
 
 ---
 
@@ -841,7 +933,13 @@ write_video_clip_html("https://nyu.databrary.org/slot/7739/0,26634/asset/16747/d
 write_video_clip_html("https://nyu.databrary.org/slot/34/0,392902/asset/9218/download?inline=true", vid_w_pix = 640, vid_h_pix = 480, show_link = FALSE)
 ```
 
-<!-- Adolph, K. (2013). Crawling and walking infants see the world differently. Databrary. Retrieved March 25, 2019 from http://doi.org/10.17910/B7RP4H -->
+[Adolph, 2013](http://doi.org/10.17910/B7RP4H)
+
+## Even earlier ontogenetic origins
+
+- Spontaneous activity
+- In retina (e.g., Shatz)
+- In muscles (twitching; Blumberg)
 
 ## Challenges
 
@@ -862,6 +960,7 @@ $\sum_{i=1}^n w_{i}(t) = 1$
 
 - Temporal delays
 - Info from simultaneous events propagates at speeds differing by 100x
+- Need theory of 'psycho/neural' relativity?
 - Comparable challenges for output streams
 
 <!-- --- -->
@@ -884,10 +983,10 @@ $\sum_{i=1}^n w_{i}(t) = 1$
 
 ## Challenges
 
-- Access to sufficiently rich datasets
+- Access to sufficiently rich datasets with multiple state variables
 - Clear specification of controlled systems & control variables
-- Widespread open sharing of systems & variables
-- Imagine a 'meta-analysis' of control variables & dynamical relationships
+- Widespread open sharing
+- Imagine easy 'meta-analyses' of control variables & dynamical relationships
 
 ---
 
@@ -935,7 +1034,6 @@ Different ways to characterize Black Boxes
 
 <img src="https://thepsychologist.bps.org.uk/sites/thepsychologist.bps.org.uk/files/mansell.jpg" height=500px/>
 
-
 ---
 
 <img src="https://ars.els-cdn.com/content/image/1-s2.0-S1383762112000586-gr1.jpg"/>
@@ -971,7 +1069,7 @@ Different ways to characterize Black Boxes
 1. For every $R_i$ ($\dot{B_i}$) there is some $S_i$ ($\dot{B_i}$ or $\dot{W_i}$)
 ...
 
-# Our open science future
+# Our (essential) open science future
 
 ## Is there a reproducibility crisis in science?
 
@@ -1021,6 +1119,12 @@ Different ways to characterize Black Boxes
 - Causal/dynamic models in discoverable formats
 - Video + physio + other temporally dense time series?
 - [Databrary.org](https://databrary.org)
+
+## An openly-shared 'behaviorome'
+
+```{r, results='asis', echo=FALSE}
+write_video_clip_html("https://nyu.databrary.org/slot/27087/0,372193/asset/119877/download?inline=true", vid_w_pix = 640, vid_h_pix = 480, show_link = FALSE)
+```
 
 ---
 
