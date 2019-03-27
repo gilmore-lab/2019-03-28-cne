@@ -630,7 +630,7 @@ William T. Powers
 - Dynamic Systems Theory (DST) (Van Gelder)
 - Ecological Psychology (e.g., Gibson, Turvey)
 - Forward models (e.g., Shadmehr & Mussa-Ivaldi; Wolpert)
-- Cognitive control/Executive functions
+- Cognitive control/executive functions
 - Reafference, Helmholtzian 'unconscious inference'
 
 ## What is being controlled?
@@ -798,7 +798,7 @@ Krakauer et al., 2017
 
 | A | B | C | D | E | F | G |
 |---|---|---|---|---|---|---|
-| B | C | D | D | F | G | A |
+| B | C | D | E | F | G | A |
 
 ---
 
