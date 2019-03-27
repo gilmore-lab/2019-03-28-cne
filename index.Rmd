@@ -1122,6 +1122,8 @@ Different ways to characterize Black Boxes
 
 ## An openly-shared 'behaviorome'
 
+---
+
 ```{r, results='asis', echo=FALSE}
 write_video_clip_html("https://nyu.databrary.org/slot/27087/0,372193/asset/119877/download?inline=true", vid_w_pix = 640, vid_h_pix = 480, show_link = FALSE)
 ```
